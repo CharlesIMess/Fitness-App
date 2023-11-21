@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4A6BB22B0AE38600C75310 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A6BB12B0AE38600C75310 /* ScheduleView.swift */; };
 		3CA16A992AF5A2F3006FC77D /* FitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA16A982AF5A2F3006FC77D /* FitnessAppApp.swift */; };
 		3CA16A9D2AF5A2F6006FC77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA16A9C2AF5A2F6006FC77D /* Assets.xcassets */; };
 		3CA16AA02AF5A2F6006FC77D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA16A9F2AF5A2F6006FC77D /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C4A6BB12B0AE38600C75310 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		3CA16A952AF5A2F3006FC77D /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA16A982AF5A2F3006FC77D /* FitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppApp.swift; sourceTree = "<group>"; };
 		3CA16A9C2AF5A2F6006FC77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		3CA16AAF2AF5A2F6006FC77D /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA16AB32AF5A2F6006FC77D /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
 		3CA16AB52AF5A2F6006FC77D /* FitnessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3CA16AC22AFDC8E2006FC77D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3CA16AC22AFDC8E2006FC77D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		3CA16A8C2AF5A2F3006FC77D = {
 			isa = PBXGroup;
 			children = (
+				3C4A6BB12B0AE38600C75310 /* ScheduleView.swift */,
 				3CA16A972AF5A2F3006FC77D /* FitnessApp */,
 				3CA16AA82AF5A2F6006FC77D /* FitnessAppTests */,
 				3CA16AB22AF5A2F6006FC77D /* FitnessAppUITests */,
@@ -259,6 +262,7 @@
 			files = (
 				3CA16AC32AFDC8E2006FC77D /* HomeView.swift in Sources */,
 				3CA16A992AF5A2F3006FC77D /* FitnessAppApp.swift in Sources */,
+				3C4A6BB22B0AE38600C75310 /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
