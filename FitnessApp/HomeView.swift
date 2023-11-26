@@ -22,7 +22,7 @@ struct EventView: View {
         ZStack{
             Rectangle()
                 .fill(color ?? Color.indigo)
-                .frame(width: UIScreen.main.bounds.width / 1.50, height: 30)
+                .frame(width: UIScreen.main.bounds.width / 1.50, height: 35)
                 .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
             Text(name)
                 .foregroundColor(.white)
@@ -42,11 +42,12 @@ struct HomeView: View {
         Event(name: "Go to dads", time: 14, duration: 1),
         Event(name: "Go to dads", time: 15, duration: 1),
         Event(name: "Visit mom", time: 17, duration: 1, color: .green),
-        Event(name: "Watch AOT with husband", time: 21, duration: 1, color: .yellow),
+        Event(name: "Watch AOT", time: 21, duration: 1, color: .yellow),
     ]
     
-    var hours: Int = 24;
+    var hours: Int = 24
     var backgroundColor: Color = Color(red: 0.4627, green: 0.8392, blue: 1.0)
+    
     var body: some View {
                 
         
@@ -57,9 +58,9 @@ struct HomeView: View {
             
             VStack{
                 Spacer()
-                Text("Sunday,")
+                Text(Date().formatted(date: .long, time: .omitted))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Text("Nov. 25th, 2023")
+                Text(Date().formatted(date: .omitted, time: .shortened))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 Spacer()
                 
@@ -71,7 +72,9 @@ struct HomeView: View {
                         let isPM = index >= 11 && index < 23
                         
                         Text("\(time == 0 ? 12 : time) \(isPM ? "pm" : "am")")
-                            .frame(height: 30)
+                            .frame(height: 20)
+                            
+                        Spacer()
                   
                         VStack{
                             ForEach(events, id: \.id){ event in
@@ -96,6 +99,7 @@ struct HomeView: View {
                 Spacer()
                 Text("Add Event:")
                     .bold()
+                    .padding(.trailing, 30)
                 Button(action: {
                     print("Button tapped!")
                 }) {
