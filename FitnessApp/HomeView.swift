@@ -6,22 +6,31 @@
 
 import SwiftUI
 
+struct Event {
+    var name: String
+    var duration: TimeInterval
+    var time: Date
+}
+
 struct HourView: View {
     var body: some View {
         
-            HStack{
-
-                Rectangle()
-                    .stroke(Color.black, lineWidth: 2.5)
-                    .frame(width: UIScreen.main.bounds.width / 1.35, height: 50)
-            }
+        ZStack{
+            Rectangle()
+                .fill(Color.indigo)
+                .frame(width: UIScreen.main.bounds.width / 1.50, height: 30)
+                .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            Text("CLASS")
+                .foregroundColor(.white)
+        }
+       
         
     }
 }
 
 struct HomeView: View {
     
-    var hours: Int = 17;
+    var hours: Int = 24;
     var backgroundColor: Color = Color(red: 0.4627, green: 0.8392, blue: 1.0)
     var body: some View {
                 
@@ -43,10 +52,15 @@ struct HomeView: View {
                 
                 
                 List(0 ..< hours, id: \.self) { index in
-                    let time = (index + 1) % 12
-                    
-                    Text("\(time == 0 ? 12 : time) \(index < 11 ? "am" : "pm")")
-                        .frame(height: 30)
+                    HStack{
+                        let time = (index + 1) % 12
+                        let isPM = index >= 11 && index < 23
+                        
+                        Text("\(time == 0 ? 12 : time) \(isPM ? "pm" : "am")")
+                            .frame(height: 30)
+                        Spacer()
+                        HourView()
+                    }
                     
                 }
                 .listStyle(InsetListStyle())
